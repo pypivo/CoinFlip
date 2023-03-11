@@ -3,7 +3,7 @@ from typing import Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from .models import UserCreate, UserShow
-from ...db.services import UserServices
+from CoinFlip.db.user_models.services import UserServices
 
 
 async def _create_new_user(body: UserCreate, session: AsyncSession):

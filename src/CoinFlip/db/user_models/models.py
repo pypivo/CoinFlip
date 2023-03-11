@@ -1,7 +1,6 @@
-from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, Integer, String, Boolean
+from src.CoinFlip.db.base import Base
 
-Base = declarative_base()
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 
 
 class User(Base):

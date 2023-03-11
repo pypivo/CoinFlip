@@ -2,15 +2,15 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.ext.asyncio.result import Result
 
+from CoinFlip.db.user_models.models import User
 
-from .models import User
 
 class UserServices:
 
     def __init__(self, db_session: AsyncSession):
         self.db_session = db_session
 
-    async def create_user(self, nick_name: str, email: str, password:str, is_admin: bool = False) -> User:
+    async def create_user(self, nick_name: str, email: str, password: str, is_admin: bool = False) -> User:
         new_user = User(
             nick_name=nick_name,
             email=email,
