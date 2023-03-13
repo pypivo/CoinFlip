@@ -3,6 +3,7 @@ from sqlalchemy.future import select
 from sqlalchemy.ext.asyncio.result import Result
 
 from CoinFlip.db.user_models.models import User
+from ..game_statistic_models.services import GeneralGameStatisticsService
 
 
 class UserServices:
@@ -18,6 +19,9 @@ class UserServices:
             is_admin=is_admin
         )
         self.db_session.add(new_user)
+        await self.db_session.flush()
+        ggs_service = GeneralGameStatisticsService(self.db_session)
+        await ggs_service.add_in_session_ggs(user_id=new_user.user_id)
         await self.db_session.commit()
         return new_user
 

@@ -6,3 +6,4 @@ SQLAlchemy==2.0.4
 alembic
 psycopg2
 asyncpg
+websockets
