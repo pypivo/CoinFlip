@@ -2,7 +2,7 @@ from typing import Optional
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from .models import UserCreate, UserShow
+from CoinFlip.api.user_api.models import UserCreate, UserShow
 from CoinFlip.db.user_models.services import UserServices
 
 

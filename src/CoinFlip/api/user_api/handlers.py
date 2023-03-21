@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends
 from fastapi import HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from .services import _create_new_user, _get_user_by_id
+from CoinFlip.api.services import _create_new_user, _get_user_by_id
 from .models import UserCreate, UserShow
 
 user_router = APIRouter()

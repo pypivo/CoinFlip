@@ -5,10 +5,10 @@ from sqlalchemy.ext.asyncio.result import Result
 from .models import GeneralGameStatistics
 
 class GeneralGameStatisticsService:
-
-    def __init__(self, db_session: AsyncSession):
-        self.db_session = db_session
-
-    async def add_in_session_ggs(self, user_id: int) -> None:
-        new_ggs = GeneralGameStatistics(user_id=user_id)
-        self.db_session.add(new_ggs)
+    pass
+    # def __init__(self, db_session: AsyncSession):
+    #     self.db_session = db_session
+    #
+    # async def add_in_session_ggs(self, user_id: int) -> None:
+    #     new_ggs = GeneralGameStatistics(user_id=user_id)
+    #     self.db_session.add(new_ggs)
